@@ -1,6 +1,4 @@
-###############################################################################
-# variables
-sequence=NFL-ancestry
+#!/bin/bash
 
 ###############################################################################
 ## producing the .outer file, the coordinate limits for the EEMS algorithm
@@ -81,3 +79,10 @@ echo "-55.949138 51.744449
 -55.949138 51.744449" > $sequence.geog-filtered.outer
 
 ###############################################################################
+# filter for individuals with geographic data
+sequence=NL-ancestry
+
+# it appears that PLINK is indeed in SNP_major_mode by default
+plink --bfile $sequence.filtered-cleaned \
+  --keep $sequence.geog-filtered.idfile \
+  --make-bed --out $sequence.geog-filtered
