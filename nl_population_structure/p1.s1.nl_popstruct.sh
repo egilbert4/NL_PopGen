@@ -109,10 +109,7 @@ mkdir $workdir/ibd_data
 browning_dir=/usr/local/share/beagle/
 beagle=$browning_dir/beagle.21Apr21.304.jar
 refinedibd=$browning_dir/refined-ibd.17Jan20.102.jar
-hapibd=$browning_dir/hap-ibd.jar
-ibdseq=$browning_dir/ibdseq.r1206.jar
 mergeibd=$browning_dir/merge-ibd-segments.17Jan20.102.jar
-ibdne=$browning_dir/ibdseq.r1206.jar
 
 # sequence
 build=38
